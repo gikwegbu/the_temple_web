@@ -13,6 +13,7 @@ module.exports = {
         'primary-color': {
           100: '#301E5E',
           200: '#F2994A',
+          300: '#C3138E0D',
           DEFAULT: '#140432'
         },
         'secondary-color': {
@@ -21,6 +22,10 @@ module.exports = {
         'golden-color': {
           DEFAULT: '#DF7250',
           200: '#FFC700'
+        },
+        'gray-color': {
+          100: '#76768D',
+          DEFAULT: '#F7F4F4'
         }
       }
     }

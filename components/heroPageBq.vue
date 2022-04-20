@@ -30,9 +30,8 @@
         </div>
       </div>
       <!-- This design only displays on sm and above screens -->
-      <!-- <div class="hidden sm:flex justify-between items-center w-full h-screen "> -->
-      <div class="hidden sm:flex justify-evenly items-center w-full h-screen ">
-        <div class="flex-1  px-12">
+      <div class="hidden sm:flex justify-between items-center w-full h-screen ">
+        <div class="px-12">
           <div class="font-bold text-2xl ">
             <div class="text-white">
               Unlock the most
@@ -50,13 +49,13 @@
             personalized video message for any occasion.
           </div>
           <div class="pt-12" />
+          <!-- <div class="rounded-md w-1/3 text-white cursor-pointer py-2 text-center bg-gradient-to-r from-secondary-color to-primary-color"> -->
           <div class="rounded-md w-1/3 text-white cursor-pointer py-2 text-center bg-gradient-to-r from-linear-gradient to-linear-gradient-100">
             <div> Book now </div>
           </div>
           <div class="pt-4" />
         </div>
-        <!-- <div class="flex flex-1 justify-between bg-white"> -->
-        <div class="flex flex-1 justify-between ">
+        <div class="flex flex-1 justify-between">
           <div class="w-80 relative z-0">
             <div class="absolute left-6  z-2 h-96 w-56 rounded-lg border-dashed border-2 border-primary-color-200" />
             <div class="absolute top-4 z-3 h-96 w-56 rounded-2xl">
@@ -79,15 +78,13 @@
         </div>
       </div>
       <div class="sm:hidden w-full h-screen relative z-0">
-        <!-- <div class="relative"> -->
-        <div class="relative h-full">
-          <!-- <img src="~assets/image/clout.png" alt="image Full" class="h-full w-full rounded-t-2xl"> -->
+        <div class="relative">
           <img src="~assets/image/clout.png" alt="image Full" class="h-full w-full rounded-t-2xl">
           <img src="~assets/image/bg_gradient.png" alt="image Full" class="h-full w-full rounded-t-2xl absolute bottom-0">
         </div>
         <div class="absolute bottom-28 px-8">
           <div class="">
-            <div class="font-bold text-4xl leading-normal" >
+            <div class="font-bold text-4xl leading-loose">
               <div class="text-white">
                 Unlock the most
               </div>
@@ -105,7 +102,7 @@
             </div>
             <div class="pt-12" />
             <!-- <div class="rounded-md w-1/3 text-white cursor-pointer py-2 text-center bg-gradient-to-r from-secondary-color to-primary-color"> -->
-            <div class="text-xl rounded-md w-3/6 text-white cursor-pointer py-4 text-center bg-gradient-to-r from-linear-gradient to-linear-gradient-100">
+            <div class="text-xl rounded-md w-2/5 text-white cursor-pointer py-4 text-center bg-gradient-to-r from-linear-gradient to-linear-gradient-100">
               <div> Book now </div>
             </div>
             <div class="pt-4" />
@@ -113,8 +110,8 @@
         </div>
       </div>
     </div>
-    <div class="bg-white pt-12">
-      <div class="flex flex-col sm:flex-row sm:justify-between items-center w-full sm:py-16">
+    <div class="bg-white py-12">
+      <div class="flex flex-col sm:flex-row sm:justify-between items-center w-full  py-16">
         <div class="px-8 sm:px-12">
           <div class="my-4 bg-gradient-to-r from-linear-gradient to-linear-gradient-100 w-24 sm:w-12 h-24 sm:h-12 rounded-2xl sm:p-3 flex justify-center items-center">
             <img src="~assets/icon/mic.png" alt="mic icon" class=" w-10 sm:h-6  h-10 sm:w-6">
@@ -208,7 +205,7 @@
           </div>
         </div>
       </div>
-      <div class="ml-12 mt-12 sm:-mt-24 flex justify-between items-center">
+      <div class="ml-12 mt-24 sm:-mt-24 flex justify-between items-center">
         <div>
           <img src="~assets/image/line.png" alt="image thumbnail" class="h-36 hidden sm:block">
         </div>
@@ -226,7 +223,7 @@
       </div>
     </div>
     <div class="bg-white">
-      <div class="flex justify-between items-center px-12 pt-12">
+      <div class="flex justify-between items-center px-12 my-12">
         <div class="py-4 text-5xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-linear-gradient to-linear-gradient-100">
           Categories
         </div>
@@ -240,15 +237,13 @@
           </div>
         </div>
       </div>
-      <div class="pl-12 pt-2 pb-4 flex items-center overflow-x-auto">
-        <div class="flex justify-around items-center border-solid border-2 border-secondary-color rounded-full pl-4 pr-8 py-2 font-medium text-secondary-color mr-4">
+      <div class="pl-12 py-4 flex items-center overflow-x-auto">
+        <div class="flex justify-around items-center border-solid border-2 border-secondary-color rounded-full px-4 py-2 font-medium text-secondary-color mr-4">
           <img src="~assets/icon/e1.png" class="h-4 w-4 mr-2">
           <div> New </div>
         </div>
-        <div v-for="cat in catArr" :key="cat.id" class="flex justify-around items-center pl-1 pr-8 py-1 mr-4  border-solid border-2 hover:border-secondary-color hover:text-secondary-color border-gray-color rounded-full  font-medium text-gray-color-100 cursor-pointer">
-          <div class="bg-white rounded-full h-10 w-10 flex justify-center items-center">
-            <img :src="cat.icon" class="h-6 w-6 mr-2">
-          </div>
+        <div v-for="cat in catArr" :key="cat.id" class="flex justify-around items-center border-solid border-2 hover:border-secondary-color hover:text-secondary-color border-gray-300 rounded-full px-4 py-2 font-medium text-gray-300 mr-4 cursor-pointer">
+          <img :src="cat.icon" class="h-4 w-4 mr-2">
           <div class="text-lg">
             {{ cat.title }}
           </div>
@@ -263,7 +258,7 @@
               ₦{{ celeb.price.toLocaleString() }}
             </div>
           </div>
-          <div class="p-4 flex justify-between items-center bg-primary-color-300 rounded-b-2xl">
+          <div class="p-4 flex justify-between items-center bg-red-100 rounded-b-2xl">
             <div>
               <div class="font-semibold text-black whitespace-nowrap">
                 {{ celeb.name }}
@@ -290,7 +285,7 @@
               ₦{{ celeb.price.toLocaleString() }}
             </div>
           </div>
-          <div class="p-4 flex justify-between items-center bg-primary-color-300 rounded-b-2xl">
+          <div class="p-4 flex justify-between items-center bg-red-100 rounded-b-2xl">
             <div>
               <div class="font-semibold text-black whitespace-nowrap">
                 {{ celeb.name }}
@@ -322,7 +317,7 @@
               ₦{{ celeb.price.toLocaleString() }}
             </div>
           </div>
-          <div class="p-4 flex justify-between items-center bg-primary-color-300 rounded-b-2xl">
+          <div class="p-4 flex justify-between items-center bg-red-100 rounded-b-2xl">
             <div>
               <div class="font-semibold text-black whitespace-nowrap">
                 {{ celeb.name }}
@@ -415,10 +410,7 @@ export default {
         { id: 0, img: require('../assets/image/c1.png'), name: 'Busola Ayeni', secondaryCategory: 'Singer, Actress', price: 100000 },
         { id: 1, img: require('../assets/image/c2.png'), name: 'Dodos Uvieghara', secondaryCategory: 'Lifestyle, Youtube', price: 100000 },
         { id: 2, img: require('../assets/image/c3.png'), name: 'Dinma Umeh', secondaryCategory: 'Youtuber ', price: 130000 },
-        { id: 4, img: require('../assets/image/c1.png'), name: 'Busola Ayeni', secondaryCategory: 'Singer, Actress', price: 100000 },
-        { id: 5, img: require('../assets/image/c4.png'), name: 'Joshua Boyega', secondaryCategory: 'Actor', price: 100000 },
-        { id: 6, img: require('../assets/image/c2.png'), name: 'Dodos Uvieghara', secondaryCategory: 'Lifestyle, Youtube', price: 100000 },
-        { id: 7, img: require('../assets/image/c4.png'), name: 'Joshua Boyega', secondaryCategory: 'Actor', price: 100000 }
+        { id: 3, img: require('../assets/image/c4.png'), name: 'Joshua Boyega', secondaryCategory: 'Actor', price: 100000 }
       ],
       midCelebArr: [
         { id: 0, img: require('../assets/image/large_wizkid.png'), small_img: require('../assets/image/small_wizkid.png') },
